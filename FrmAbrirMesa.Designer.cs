@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAbrirMesa));
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblEscoger = new System.Windows.Forms.Label();
             this.BtnVolver = new System.Windows.Forms.Button();
             this.BtnMesa28 = new System.Windows.Forms.Button();
             this.BtnMesa27 = new System.Windows.Forms.Button();
@@ -93,16 +93,16 @@
             this.Gp1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // LblEscoger
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
-            this.label1.Font = new System.Drawing.Font("Rockwell", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(215, 36);
-            this.label1.TabIndex = 40;
-            this.label1.Text = "Escoger mesa";
+            this.LblEscoger.AutoSize = true;
+            this.LblEscoger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
+            this.LblEscoger.Font = new System.Drawing.Font("Rockwell", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEscoger.Location = new System.Drawing.Point(12, 27);
+            this.LblEscoger.Name = "LblEscoger";
+            this.LblEscoger.Size = new System.Drawing.Size(215, 36);
+            this.LblEscoger.TabIndex = 40;
+            this.LblEscoger.Text = "Escoger mesa";
             // 
             // BtnVolver
             // 
@@ -857,7 +857,7 @@
             this.Controls.Add(this.BtnVolver);
             this.Controls.Add(this.GpAdentro);
             this.Controls.Add(this.GpAfuera);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblEscoger);
             this.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -875,7 +875,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblEscoger;
         private System.Windows.Forms.Button BtnVolver;
         private System.Windows.Forms.Button BtnMesa28;
         private System.Windows.Forms.Button BtnMesa27;

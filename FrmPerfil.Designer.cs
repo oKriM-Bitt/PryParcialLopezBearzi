@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPerfil));
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblContra = new System.Windows.Forms.Label();
             this.TxtContraseña = new System.Windows.Forms.TextBox();
             this.TxtNombUsuario = new System.Windows.Forms.TextBox();
             this.LblNoU = new System.Windows.Forms.Label();
@@ -50,15 +50,15 @@
             this.GBT.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // LblContra
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(30, 298);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
-            this.label1.TabIndex = 39;
-            this.label1.Text = "Contraseña";
+            this.LblContra.AutoSize = true;
+            this.LblContra.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold);
+            this.LblContra.Location = new System.Drawing.Point(30, 298);
+            this.LblContra.Name = "LblContra";
+            this.LblContra.Size = new System.Drawing.Size(129, 25);
+            this.LblContra.TabIndex = 39;
+            this.LblContra.Text = "Contraseña";
             // 
             // TxtContraseña
             // 
@@ -217,7 +217,7 @@
             this.GBT.Controls.Add(this.LblApellido);
             this.GBT.Controls.Add(this.BtnEliminar);
             this.GBT.Controls.Add(this.LblTele);
-            this.GBT.Controls.Add(this.label1);
+            this.GBT.Controls.Add(this.LblContra);
             this.GBT.Controls.Add(this.LblCo);
             this.GBT.Controls.Add(this.TxtContraseña);
             this.GBT.Controls.Add(this.LblCa);
@@ -270,7 +270,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblContra;
         private System.Windows.Forms.TextBox TxtContraseña;
         private System.Windows.Forms.TextBox TxtNombUsuario;
         private System.Windows.Forms.Label LblNoU;

@@ -34,29 +34,29 @@
             this.BtnVolver = new System.Windows.Forms.Button();
             this.TxtPrecio = new System.Windows.Forms.TextBox();
             this.TxtNombre = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.GpCargar = new System.Windows.Forms.GroupBox();
+            this.LblStock = new System.Windows.Forms.Label();
+            this.TxtStock = new System.Windows.Forms.TextBox();
+            this.LblCate = new System.Windows.Forms.Label();
+            this.LblNombre = new System.Windows.Forms.Label();
+            this.LblPrecio = new System.Windows.Forms.Label();
             this.Grlm = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.GpModificarEliminar = new System.Windows.Forms.GroupBox();
+            this.LblS = new System.Windows.Forms.Label();
+            this.TxtStockModificar = new System.Windows.Forms.TextBox();
             this.TxtNombreModificar = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.LblN = new System.Windows.Forms.Label();
+            this.LblCat = new System.Windows.Forms.Label();
+            this.LblCod = new System.Windows.Forms.Label();
+            this.LblPr = new System.Windows.Forms.Label();
             this.BtnModificar = new System.Windows.Forms.Button();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.CmbCategoriaModificar = new System.Windows.Forms.ComboBox();
             this.TxtPrecioModificar = new System.Windows.Forms.TextBox();
             this.TxtCodigoModificar = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtStockModificar = new System.Windows.Forms.TextBox();
-            this.LblStock = new System.Windows.Forms.Label();
-            this.TxtStock = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.GpCargar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grlm)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            this.GpModificarEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // CmbCategoria
@@ -110,58 +110,77 @@
             this.TxtNombre.Size = new System.Drawing.Size(238, 32);
             this.TxtNombre.TabIndex = 40;
             // 
-            // groupBox1
+            // GpCargar
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
-            this.groupBox1.Controls.Add(this.LblStock);
-            this.groupBox1.Controls.Add(this.TxtStock);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.CmbCategoria);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.BtnAgregar);
-            this.groupBox1.Controls.Add(this.TxtNombre);
-            this.groupBox1.Controls.Add(this.TxtPrecio);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(32, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 310);
-            this.groupBox1.TabIndex = 50;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cargar Producto";
+            this.GpCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
+            this.GpCargar.Controls.Add(this.LblStock);
+            this.GpCargar.Controls.Add(this.TxtStock);
+            this.GpCargar.Controls.Add(this.LblCate);
+            this.GpCargar.Controls.Add(this.CmbCategoria);
+            this.GpCargar.Controls.Add(this.LblNombre);
+            this.GpCargar.Controls.Add(this.LblPrecio);
+            this.GpCargar.Controls.Add(this.BtnAgregar);
+            this.GpCargar.Controls.Add(this.TxtNombre);
+            this.GpCargar.Controls.Add(this.TxtPrecio);
+            this.GpCargar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GpCargar.Location = new System.Drawing.Point(32, 12);
+            this.GpCargar.Name = "GpCargar";
+            this.GpCargar.Size = new System.Drawing.Size(526, 310);
+            this.GpCargar.TabIndex = 50;
+            this.GpCargar.TabStop = false;
+            this.GpCargar.Text = "Cargar Producto";
             // 
-            // label2
+            // LblStock
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 154);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 25);
-            this.label2.TabIndex = 44;
-            this.label2.Text = "Categoria";
+            this.LblStock.AutoSize = true;
+            this.LblStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblStock.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblStock.Location = new System.Drawing.Point(6, 111);
+            this.LblStock.Name = "LblStock";
+            this.LblStock.Size = new System.Drawing.Size(68, 25);
+            this.LblStock.TabIndex = 46;
+            this.LblStock.Text = "Stock";
             // 
-            // label4
+            // TxtStock
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 25);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(235, 25);
-            this.label4.TabIndex = 38;
-            this.label4.Text = " Nombre del Producto";
+            this.TxtStock.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStock.Location = new System.Drawing.Point(154, 104);
+            this.TxtStock.Name = "TxtStock";
+            this.TxtStock.Size = new System.Drawing.Size(345, 32);
+            this.TxtStock.TabIndex = 47;
             // 
-            // label5
+            // LblCate
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label5.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 25);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "Precio";
+            this.LblCate.AutoSize = true;
+            this.LblCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblCate.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCate.Location = new System.Drawing.Point(6, 154);
+            this.LblCate.Name = "LblCate";
+            this.LblCate.Size = new System.Drawing.Size(112, 25);
+            this.LblCate.TabIndex = 44;
+            this.LblCate.Text = "Categoria";
+            // 
+            // LblNombre
+            // 
+            this.LblNombre.AutoSize = true;
+            this.LblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblNombre.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Location = new System.Drawing.Point(6, 25);
+            this.LblNombre.Name = "LblNombre";
+            this.LblNombre.Size = new System.Drawing.Size(235, 25);
+            this.LblNombre.TabIndex = 38;
+            this.LblNombre.Text = " Nombre del Producto";
+            // 
+            // LblPrecio
+            // 
+            this.LblPrecio.AutoSize = true;
+            this.LblPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblPrecio.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPrecio.Location = new System.Drawing.Point(6, 62);
+            this.LblPrecio.Name = "LblPrecio";
+            this.LblPrecio.Size = new System.Drawing.Size(78, 25);
+            this.LblPrecio.TabIndex = 39;
+            this.LblPrecio.Text = "Precio";
             // 
             // Grlm
             // 
@@ -175,28 +194,47 @@
             this.Grlm.TabIndex = 51;
             this.Grlm.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Grlm_CellContentClick);
             // 
-            // groupBox2
+            // GpModificarEliminar
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.TxtStockModificar);
-            this.groupBox2.Controls.Add(this.TxtNombreModificar);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.BtnModificar);
-            this.groupBox2.Controls.Add(this.BtnEliminar);
-            this.groupBox2.Controls.Add(this.CmbCategoriaModificar);
-            this.groupBox2.Controls.Add(this.TxtPrecioModificar);
-            this.groupBox2.Controls.Add(this.TxtCodigoModificar);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(564, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(526, 310);
-            this.groupBox2.TabIndex = 52;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Modificar  o Eliminar";
+            this.GpModificarEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
+            this.GpModificarEliminar.Controls.Add(this.LblS);
+            this.GpModificarEliminar.Controls.Add(this.TxtStockModificar);
+            this.GpModificarEliminar.Controls.Add(this.TxtNombreModificar);
+            this.GpModificarEliminar.Controls.Add(this.LblN);
+            this.GpModificarEliminar.Controls.Add(this.LblCat);
+            this.GpModificarEliminar.Controls.Add(this.LblCod);
+            this.GpModificarEliminar.Controls.Add(this.LblPr);
+            this.GpModificarEliminar.Controls.Add(this.BtnModificar);
+            this.GpModificarEliminar.Controls.Add(this.BtnEliminar);
+            this.GpModificarEliminar.Controls.Add(this.CmbCategoriaModificar);
+            this.GpModificarEliminar.Controls.Add(this.TxtPrecioModificar);
+            this.GpModificarEliminar.Controls.Add(this.TxtCodigoModificar);
+            this.GpModificarEliminar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GpModificarEliminar.Location = new System.Drawing.Point(564, 12);
+            this.GpModificarEliminar.Name = "GpModificarEliminar";
+            this.GpModificarEliminar.Size = new System.Drawing.Size(526, 310);
+            this.GpModificarEliminar.TabIndex = 52;
+            this.GpModificarEliminar.TabStop = false;
+            this.GpModificarEliminar.Text = "Modificar  o Eliminar";
+            // 
+            // LblS
+            // 
+            this.LblS.AutoSize = true;
+            this.LblS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblS.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblS.Location = new System.Drawing.Point(6, 159);
+            this.LblS.Name = "LblS";
+            this.LblS.Size = new System.Drawing.Size(68, 25);
+            this.LblS.TabIndex = 52;
+            this.LblS.Text = "Stock";
+            // 
+            // TxtStockModificar
+            // 
+            this.TxtStockModificar.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtStockModificar.Location = new System.Drawing.Point(160, 152);
+            this.TxtStockModificar.Name = "TxtStockModificar";
+            this.TxtStockModificar.Size = new System.Drawing.Size(345, 32);
+            this.TxtStockModificar.TabIndex = 53;
             // 
             // TxtNombreModificar
             // 
@@ -206,49 +244,49 @@
             this.TxtNombreModificar.Size = new System.Drawing.Size(345, 32);
             this.TxtNombreModificar.TabIndex = 51;
             // 
-            // label7
+            // LblN
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(6, 76);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 25);
-            this.label7.TabIndex = 50;
-            this.label7.Text = "Nombre";
+            this.LblN.AutoSize = true;
+            this.LblN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblN.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblN.Location = new System.Drawing.Point(6, 76);
+            this.LblN.Name = "LblN";
+            this.LblN.Size = new System.Drawing.Size(96, 25);
+            this.LblN.TabIndex = 50;
+            this.LblN.Text = "Nombre";
             // 
-            // label1
+            // LblCat
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 193);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 25);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Categoria";
+            this.LblCat.AutoSize = true;
+            this.LblCat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblCat.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCat.Location = new System.Drawing.Point(6, 193);
+            this.LblCat.Name = "LblCat";
+            this.LblCat.Size = new System.Drawing.Size(112, 25);
+            this.LblCat.TabIndex = 44;
+            this.LblCat.Text = "Categoria";
             // 
-            // label3
+            // LblCod
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(6, 28);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Codigo";
+            this.LblCod.AutoSize = true;
+            this.LblCod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblCod.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCod.Location = new System.Drawing.Point(6, 28);
+            this.LblCod.Name = "LblCod";
+            this.LblCod.Size = new System.Drawing.Size(85, 25);
+            this.LblCod.TabIndex = 38;
+            this.LblCod.Text = "Codigo";
             // 
-            // label6
+            // LblPr
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label6.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 121);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 25);
-            this.label6.TabIndex = 39;
-            this.label6.Text = "Precio";
+            this.LblPr.AutoSize = true;
+            this.LblPr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblPr.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPr.Location = new System.Drawing.Point(6, 121);
+            this.LblPr.Name = "LblPr";
+            this.LblPr.Size = new System.Drawing.Size(78, 25);
+            this.LblPr.TabIndex = 39;
+            this.LblPr.Text = "Precio";
             // 
             // BtnModificar
             // 
@@ -301,53 +339,15 @@
             this.TxtCodigoModificar.Size = new System.Drawing.Size(345, 32);
             this.TxtCodigoModificar.TabIndex = 41;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label8.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 159);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 25);
-            this.label8.TabIndex = 52;
-            this.label8.Text = "Stock";
-            // 
-            // TxtStockModificar
-            // 
-            this.TxtStockModificar.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStockModificar.Location = new System.Drawing.Point(160, 152);
-            this.TxtStockModificar.Name = "TxtStockModificar";
-            this.TxtStockModificar.Size = new System.Drawing.Size(345, 32);
-            this.TxtStockModificar.TabIndex = 53;
-            // 
-            // LblStock
-            // 
-            this.LblStock.AutoSize = true;
-            this.LblStock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.LblStock.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblStock.Location = new System.Drawing.Point(6, 111);
-            this.LblStock.Name = "LblStock";
-            this.LblStock.Size = new System.Drawing.Size(68, 25);
-            this.LblStock.TabIndex = 46;
-            this.LblStock.Text = "Stock";
-            // 
-            // TxtStock
-            // 
-            this.TxtStock.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtStock.Location = new System.Drawing.Point(154, 104);
-            this.TxtStock.Name = "TxtStock";
-            this.TxtStock.Size = new System.Drawing.Size(345, 32);
-            this.TxtStock.TabIndex = 47;
-            // 
             // FrmCargarPlato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.GpModificarEliminar);
             this.Controls.Add(this.Grlm);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.GpCargar);
             this.Controls.Add(this.BtnVolver);
             this.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -356,11 +356,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cargar Plato";
             this.Load += new System.EventHandler(this.FrmCargarPlato_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GpCargar.ResumeLayout(false);
+            this.GpCargar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grlm)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.GpModificarEliminar.ResumeLayout(false);
+            this.GpModificarEliminar.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -372,25 +372,25 @@
         private System.Windows.Forms.Button BtnVolver;
         private System.Windows.Forms.TextBox TxtPrecio;
         private System.Windows.Forms.TextBox TxtNombre;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.GroupBox GpCargar;
+        private System.Windows.Forms.Label LblCate;
+        private System.Windows.Forms.Label LblNombre;
+        private System.Windows.Forms.Label LblPrecio;
         private System.Windows.Forms.DataGridView Grlm;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.GroupBox GpModificarEliminar;
+        private System.Windows.Forms.Label LblCat;
+        private System.Windows.Forms.Label LblCod;
+        private System.Windows.Forms.Label LblPr;
         private System.Windows.Forms.Button BtnModificar;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.ComboBox CmbCategoriaModificar;
         private System.Windows.Forms.TextBox TxtPrecioModificar;
         private System.Windows.Forms.TextBox TxtCodigoModificar;
         private System.Windows.Forms.TextBox TxtNombreModificar;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label LblN;
         private System.Windows.Forms.Label LblStock;
         private System.Windows.Forms.TextBox TxtStock;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LblS;
         private System.Windows.Forms.TextBox TxtStockModificar;
     }
 }

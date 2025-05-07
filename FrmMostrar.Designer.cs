@@ -34,7 +34,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMostrarStock));
             this.GrlmAdelante = new System.Windows.Forms.DataGridView();
             this.BtnMostrarSegun = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblMostrar = new System.Windows.Forms.Label();
             this.CmbCategoria = new System.Windows.Forms.ComboBox();
             this.GrlmAtras = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,16 +73,16 @@
             this.BtnMostrarSegun.UseVisualStyleBackColor = false;
             this.BtnMostrarSegun.Click += new System.EventHandler(this.BtnMostrarSegun_Click);
             // 
-            // label1
+            // LblMostrar
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
-            this.label1.Font = new System.Drawing.Font("Rockwell", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(13, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(223, 36);
-            this.label1.TabIndex = 42;
-            this.label1.Text = "Mostrar Según";
+            this.LblMostrar.AutoSize = true;
+            this.LblMostrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
+            this.LblMostrar.Font = new System.Drawing.Font("Rockwell", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMostrar.Location = new System.Drawing.Point(13, 28);
+            this.LblMostrar.Name = "LblMostrar";
+            this.LblMostrar.Size = new System.Drawing.Size(223, 36);
+            this.LblMostrar.TabIndex = 42;
+            this.LblMostrar.Text = "Mostrar Según";
             // 
             // CmbCategoria
             // 
@@ -165,7 +165,7 @@
             this.Controls.Add(this.ChtPopularidad);
             this.Controls.Add(this.GrlmAdelante);
             this.Controls.Add(this.BtnMostrarSegun);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LblMostrar);
             this.Controls.Add(this.CmbCategoria);
             this.Controls.Add(this.GrlmAtras);
             this.Controls.Add(this.BtnVolver);
@@ -189,7 +189,7 @@
 
         private System.Windows.Forms.DataGridView GrlmAdelante;
         private System.Windows.Forms.Button BtnMostrarSegun;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblMostrar;
         private System.Windows.Forms.ComboBox CmbCategoria;
         private System.Windows.Forms.DataGridView GrlmAtras;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
