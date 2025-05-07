@@ -1,0 +1,80 @@
+D:\Programas de Programacion\Programs\PryPueblox\bin\Debug\PryPueblox.exe.config
+D:\Programas de Programacion\Programs\PryPueblox\bin\Debug\PryPueblox.exe
+D:\Programas de Programacion\Programs\PryPueblox\bin\Debug\PryPueblox.pdb
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.csproj.AssemblyReference.cache
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.FrmInicio.resources
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.FrmAbrirMesa.resources
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.FrmCargarPlato.resources
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.FrmMostrar.resources
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.FrmTIcket.resources
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.Properties.Resources.resources
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.csproj.GenerateResource.cache
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.csproj.CoreCompileInputs.cache
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.exe
+D:\Programas de Programacion\Programs\PryPueblox\obj\Debug\PryPueblox.pdb
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.csproj.AssemblyReference.cache
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.exe
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.pdb
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\bin\Debug\PryPueblox.exe.config
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\bin\Debug\PryPueblox.exe
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\bin\Debug\PryPueblox.pdb
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.FrmInicio.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.FrmAbrirMesa.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.FrmCargarPlato.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.FrmLibrioDiario.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.FrmMostrar.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.FrmTicket.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.Properties.Resources.resources
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.csproj.GenerateResource.cache
+C:\Users\mirko\Prys\ProgResto-main\ProgResto-main\obj\Debug\PryPueblox.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\Downloads\ProgResto-main\bin\Debug\PryPueblox.exe.config
+C:\Users\Mirko\Downloads\ProgResto-main\bin\Debug\PryPueblox.exe
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.csproj.AssemblyReference.cache
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.FrmInicio.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.FrmAbrirMesa.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.FrmCargarPlato.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.FrmLibrioDiario.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.FrmMostrar.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.FrmTicket.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.Properties.Resources.resources
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.csproj.GenerateResource.cache
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.csproj.CoreCompileInputs.cache
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.exe
+C:\Users\Mirko\Downloads\ProgResto-main\obj\Debug\PryPueblox.pdb
+C:\Users\Mirko\Downloads\ProgResto-main\bin\Debug\PryPueblox.pdb
+F:\ProgResto-main\bin\Debug\PryPueblox.exe.config
+F:\ProgResto-main\bin\Debug\PryPueblox.exe
+F:\ProgResto-main\bin\Debug\PryPueblox.pdb
+F:\ProgResto-main\obj\Debug\PryPueblox.csproj.AssemblyReference.cache
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmIncioDeSesion.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmInicio.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmAbrirMesa.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmCargarPlato.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmLibrioDiario.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmRegistro.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmTicket.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.Properties.Resources.resources
+F:\ProgResto-main\obj\Debug\PryPueblox.csproj.GenerateResource.cache
+F:\ProgResto-main\obj\Debug\PryPueblox.csproj.CoreCompileInputs.cache
+F:\ProgResto-main\obj\Debug\PryPueblox.exe
+F:\ProgResto-main\obj\Debug\PryPueblox.pdb
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmPerfil.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.csproj.AssemblyReference.cache
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmIncioDeSesion.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmInicio.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmAbrirMesa.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmCargarPlato.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmLibrioDiario.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmMostrar.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmPerfil.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmRegistro.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.FrmTicket.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.Properties.Resources.resources
+D:\ProgResto-main\obj\Debug\PryPueblox.csproj.GenerateResource.cache
+D:\ProgResto-main\obj\Debug\PryPueblox.csproj.CoreCompileInputs.cache
+D:\ProgResto-main\obj\Debug\PryPueblox.exe
+D:\ProgResto-main\obj\Debug\PryPueblox.pdb
+D:\ProgResto-main\bin\Debug\PryPueblox.exe.config
+D:\ProgResto-main\bin\Debug\PryPueblox.exe
+D:\ProgResto-main\bin\Debug\PryPueblox.pdb
+F:\ProgResto-main\obj\Debug\PryPueblox.FrmMostrarStock.resources
