@@ -1,0 +1,484 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|c:\\users\\mirko\\desktop\\progresto-main\\frminciodesesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frminciodesesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmlibriodiario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmlibriodiario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmmostrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmmostrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clsconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ticketprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:ticketprinter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmregistro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmabrirmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmabrirmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clsusuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clsusuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frminicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmcargarplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmcargarplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\sesionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:sesionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\rolusuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:rolusuariodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\orderheaderinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:orderheaderinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clsproductoscrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clsproductoscrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmcargarplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmcargarplato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frminciodesesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frminciodesesion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clscategoriascrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clscategoriascrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clsnodoticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clsnodoticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clsprodprop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clsprodprop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\clsordenescrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:clsordenescrud.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmmostrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmmostrar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmabrirmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmabrirmesa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|C:\\Users\\Mirko\\Desktop\\ProgResto-main\\frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}|PryPueblox.csproj|solutionrelative:frmperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mirko\\Documents\\ProgResto-main\\FrmTIcket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmRegistro.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmRegistro.cs",
+              "RelativeDocumentMoniker": "FrmRegistro.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmRegistro.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T07:54:06.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmPerfil.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmPerfil.cs",
+              "RelativeDocumentMoniker": "FrmPerfil.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmPerfil.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T07:54:05.815Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmMostrar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmMostrar.cs",
+              "RelativeDocumentMoniker": "FrmMostrar.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmMostrar.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T18:56:06.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmLibrioDiario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmLibrioDiario.cs",
+              "RelativeDocumentMoniker": "FrmLibrioDiario.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmLibrioDiario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T07:54:03.03Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmInicio.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "FrmInicio.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmInicio.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T07:54:02.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmIncioDeSesion.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmIncioDeSesion.cs",
+              "RelativeDocumentMoniker": "FrmIncioDeSesion.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmIncioDeSesion.cs [Dise\u00F1o]",
+              "RelativeToolTip": "FrmIncioDeSesion.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T19:51:57.04Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmTicket.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmTIcket.cs",
+              "RelativeDocumentMoniker": "FrmTIcket.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmTIcket.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-05T15:52:24.533Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClsConexion.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsConexion.cs",
+              "RelativeDocumentMoniker": "ClsConexion.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsConexion.cs",
+              "RelativeToolTip": "ClsConexion.cs",
+              "ViewState": "AgIAAAQCAAAAAAAAAAAwwCQCAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:03:37.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TicketPrinter.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\TicketPrinter.cs",
+              "RelativeDocumentMoniker": "TicketPrinter.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\TicketPrinter.cs",
+              "RelativeToolTip": "TicketPrinter.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAwwJEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T20:51:40.601Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FrmRegistro.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmRegistro.cs",
+              "RelativeDocumentMoniker": "FrmRegistro.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmRegistro.cs",
+              "RelativeToolTip": "FrmRegistro.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAowOIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T08:08:21.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "FrmAbrirMesa.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmAbrirMesa.cs",
+              "RelativeDocumentMoniker": "FrmAbrirMesa.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmAbrirMesa.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:20:04.485Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ClsUsuarioDal.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsUsuarioDal.cs",
+              "RelativeDocumentMoniker": "ClsUsuarioDal.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsUsuarioDal.cs",
+              "RelativeToolTip": "ClsUsuarioDal.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T16:19:35.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FrmInicio.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmInicio.cs",
+              "RelativeDocumentMoniker": "FrmInicio.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmInicio.cs",
+              "RelativeToolTip": "FrmInicio.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAQwGwAAACcAwAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:45:25.646Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SesionUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\SesionUsuario.cs",
+              "RelativeDocumentMoniker": "SesionUsuario.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\SesionUsuario.cs",
+              "RelativeToolTip": "SesionUsuario.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAC4AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:47:59.717Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RolUsuarioDAL.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\RolUsuarioDAL.cs",
+              "RelativeDocumentMoniker": "RolUsuarioDAL.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\RolUsuarioDAL.cs",
+              "RelativeToolTip": "RolUsuarioDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-02T22:12:10.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T07:51:01.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "FrmCargarPlato.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmCargarPlato.cs",
+              "RelativeDocumentMoniker": "FrmCargarPlato.cs",
+              "ToolTip": "F:\\ProgResto-main\\FrmCargarPlato.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:34:15.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClsProductosCRUD.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsProductosCRUD.cs",
+              "RelativeDocumentMoniker": "ClsProductosCRUD.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsProductosCRUD.cs",
+              "RelativeToolTip": "ClsProductosCRUD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T16:17:57.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FrmCargarPlato.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmCargarPlato.cs",
+              "RelativeDocumentMoniker": "FrmCargarPlato.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmCargarPlato.cs",
+              "RelativeToolTip": "FrmCargarPlato.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsBAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:35:38.352Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "FrmIncioDeSesion.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmIncioDeSesion.cs",
+              "RelativeDocumentMoniker": "FrmIncioDeSesion.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmIncioDeSesion.cs",
+              "RelativeToolTip": "FrmIncioDeSesion.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwFgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T14:41:47.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderHeaderInfo.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\OrderHeaderInfo.cs",
+              "RelativeDocumentMoniker": "OrderHeaderInfo.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\OrderHeaderInfo.cs",
+              "RelativeToolTip": "OrderHeaderInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T16:26:45.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ClsCategoriasCRUD.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsCategoriasCRUD.cs",
+              "RelativeDocumentMoniker": "ClsCategoriasCRUD.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsCategoriasCRUD.cs",
+              "RelativeToolTip": "ClsCategoriasCRUD.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T11:55:55.454Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ClsNodoTicket.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsNodoTicket.cs",
+              "RelativeDocumentMoniker": "ClsNodoTicket.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsNodoTicket.cs",
+              "RelativeToolTip": "ClsNodoTicket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T16:34:57.621Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ClsProdProp.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsProdProp.cs",
+              "RelativeDocumentMoniker": "ClsProdProp.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsProdProp.cs",
+              "RelativeToolTip": "ClsProdProp.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:32:31.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ClsOrdenesCRUD.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsOrdenesCRUD.cs",
+              "RelativeDocumentMoniker": "ClsOrdenesCRUD.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\ClsOrdenesCRUD.cs",
+              "RelativeToolTip": "ClsOrdenesCRUD.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAQwBsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T16:24:16.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "FrmMostrar.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmMostrar.cs",
+              "RelativeDocumentMoniker": "FrmMostrar.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmMostrar.cs",
+              "RelativeToolTip": "FrmMostrar.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAIAwwFoAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T18:55:41.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "FrmAbrirMesa.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmAbrirMesa.cs",
+              "RelativeDocumentMoniker": "FrmAbrirMesa.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmAbrirMesa.cs",
+              "RelativeToolTip": "FrmAbrirMesa.cs",
+              "ViewState": "AgIAANAAAAAAAAAAAAAowPUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T16:34:16.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "FrmTicket.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmTIcket.cs",
+              "RelativeDocumentMoniker": "FrmTIcket.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmTIcket.cs",
+              "RelativeToolTip": "FrmTIcket.cs",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAIwJ4BAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T23:48:14.428Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "FrmPerfil.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmPerfil.cs",
+              "RelativeDocumentMoniker": "FrmPerfil.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Desktop\\ProgResto-main\\FrmPerfil.cs",
+              "RelativeToolTip": "FrmPerfil.cs",
+              "ViewState": "AgIAAIUAAAAAAAAAAAAYwKwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T15:35:18.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "FrmTIcket.cs",
+              "DocumentMoniker": "C:\\Users\\Mirko\\Documents\\ProgResto-main\\FrmTIcket.cs",
+              "RelativeDocumentMoniker": "..\\..\\Documents\\ProgResto-main\\FrmTIcket.cs",
+              "ToolTip": "C:\\Users\\Mirko\\Documents\\ProgResto-main\\FrmTIcket.cs",
+              "RelativeToolTip": "..\\..\\Documents\\ProgResto-main\\FrmTIcket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-04T22:21:43.638Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
