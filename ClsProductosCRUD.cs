@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Windows.Forms; 
 
-namespace PryPueblox
+namespace PuebloGrill
 {
    
     public class ClsProductosCRUD

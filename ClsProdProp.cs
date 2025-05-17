@@ -1,4 +1,4 @@
-﻿namespace PryPueblox
+﻿namespace PuebloGrill
 {
     public class ClsProdProp
     {

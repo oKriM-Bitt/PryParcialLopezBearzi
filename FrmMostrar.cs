@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting; // Using para Chart
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmMostrarStock : Form
     {

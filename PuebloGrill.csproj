@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC4905E6-4BB6-48CB-9381-B57C504AC2AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PryPueblox</RootNamespace>
+    <AssemblyName>PryPueblox</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>f861b851-0d67-4392-bb42-a3bf670a6ecf.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClsCategoriasCRUD.cs" />
+    <Compile Include="ClsConexion.cs" />
+    <Compile Include="ClsOrdenesCRUD.cs" />
+    <Compile Include="ClsProductosCRUD.cs" />
+    <Compile Include="ClsUsuarioCRUD.cs" />
+    <Compile Include="ClsNodoTicket.cs" />
+    <Compile Include="ClsProdProp.cs" />
+    <Compile Include="FrmIncioDeSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIncioDeSesion.Designer.cs">
+      <DependentUpon>FrmIncioDeSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInicio.Designer.cs">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAbrirMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbrirMesa.Designer.cs">
+      <DependentUpon>FrmAbrirMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCargarPlato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCargarPlato.Designer.cs">
+      <DependentUpon>FrmCargarPlato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLibrioDiario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLibrioDiario.Designer.cs">
+      <DependentUpon>FrmLibrioDiario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAccionesMesaOcupada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccionesMesaOcupada.Designer.cs">
+      <DependentUpon>FrmAccionesMesaOcupada.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrar.Designer.cs">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerfil.Designer.cs">
+      <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistro.Designer.cs">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTicket.Designer.cs">
+      <DependentUpon>FrmTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderHeaderInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RolUsuarioDAL.cs" />
+    <Compile Include="SesionUsuario.cs" />
+    <Compile Include="TicketPrinter.cs" />
+    <EmbeddedResource Include="FrmAccionesMesaOcupada.resx">
+      <DependentUpon>FrmAccionesMesaOcupada.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIncioDeSesion.resx">
+      <DependentUpon>FrmIncioDeSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInicio.resx">
+      <DependentUpon>FrmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAbrirMesa.resx">
+      <DependentUpon>FrmAbrirMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCargarPlato.resx">
+      <DependentUpon>FrmCargarPlato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLibrioDiario.resx">
+      <DependentUpon>FrmLibrioDiario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrar.resx">
+      <DependentUpon>FrmMostrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerfil.resx">
+      <DependentUpon>FrmPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistro.resx">
+      <DependentUpon>FrmRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTicket.resx">
+      <DependentUpon>FrmTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f861b851-0d67-4392-bb42-a3bf670a6ecf.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="f861b851-0d67-4392-bb42-a3bf670a6ecf.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

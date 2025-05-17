@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms; // Para MessageBox
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     // Clase pública para acceder desde formularios
     public class ClsOrdenesCRUD

@@ -1,4 +1,4 @@
-﻿namespace PryPueblox
+﻿namespace PuebloGrill
 {
     partial class FrmTicket
     {
@@ -49,10 +49,12 @@
             this.LblM = new System.Windows.Forms.Label();
             this.CmbMostrarSegun = new System.Windows.Forms.ComboBox();
             this.LblMos = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.NumCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Npersonas)).BeginInit();
             this.GbPa.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrlMListar)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BtnQuitar
@@ -60,7 +62,7 @@
             this.BtnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
             this.BtnQuitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnQuitar.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnQuitar.Location = new System.Drawing.Point(665, 199);
+            this.BtnQuitar.Location = new System.Drawing.Point(1169, 42);
             this.BtnQuitar.Margin = new System.Windows.Forms.Padding(6);
             this.BtnQuitar.Name = "BtnQuitar";
             this.BtnQuitar.Size = new System.Drawing.Size(160, 50);
@@ -74,11 +76,11 @@
             this.BtnImprimir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
             this.BtnImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnImprimir.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnImprimir.Location = new System.Drawing.Point(978, 449);
+            this.BtnImprimir.Location = new System.Drawing.Point(981, 482);
             this.BtnImprimir.Name = "BtnImprimir";
             this.BtnImprimir.Size = new System.Drawing.Size(257, 50);
             this.BtnImprimir.TabIndex = 193;
-            this.BtnImprimir.Text = "Imprimir y Cerrar";
+            this.BtnImprimir.Text = "Imprimir ";
             this.BtnImprimir.UseVisualStyleBackColor = false;
             this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
@@ -87,7 +89,7 @@
             this.BtnVolver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
             this.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnVolver.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVolver.Location = new System.Drawing.Point(9, 631);
+            this.BtnVolver.Location = new System.Drawing.Point(12, 661);
             this.BtnVolver.Name = "BtnVolver";
             this.BtnVolver.Size = new System.Drawing.Size(257, 50);
             this.BtnVolver.TabIndex = 192;
@@ -100,10 +102,10 @@
             this.BtnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnAgregar.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.Location = new System.Drawing.Point(467, 200);
+            this.BtnAgregar.Location = new System.Drawing.Point(997, 43);
             this.BtnAgregar.Margin = new System.Windows.Forms.Padding(6);
             this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(148, 49);
+            this.BtnAgregar.Size = new System.Drawing.Size(160, 49);
             this.BtnAgregar.TabIndex = 191;
             this.BtnAgregar.Text = "Agregar";
             this.BtnAgregar.UseVisualStyleBackColor = false;
@@ -113,7 +115,7 @@
             // 
             this.NumCantidad.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
             this.NumCantidad.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumCantidad.Location = new System.Drawing.Point(913, 146);
+            this.NumCantidad.Location = new System.Drawing.Point(914, 54);
             this.NumCantidad.Margin = new System.Windows.Forms.Padding(6);
             this.NumCantidad.Name = "NumCantidad";
             this.NumCantidad.Size = new System.Drawing.Size(59, 30);
@@ -123,7 +125,7 @@
             // 
             this.CmbMenu.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMenu.FormattingEnabled = true;
-            this.CmbMenu.Location = new System.Drawing.Point(467, 145);
+            this.CmbMenu.Location = new System.Drawing.Point(479, 54);
             this.CmbMenu.Margin = new System.Windows.Forms.Padding(6);
             this.CmbMenu.Name = "CmbMenu";
             this.CmbMenu.Size = new System.Drawing.Size(423, 31);
@@ -134,7 +136,7 @@
             this.LblCantidad.AutoSize = true;
             this.LblCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
             this.LblCantidad.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCantidad.Location = new System.Drawing.Point(463, 109);
+            this.LblCantidad.Location = new System.Drawing.Point(475, 18);
             this.LblCantidad.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LblCantidad.Name = "LblCantidad";
             this.LblCantidad.Size = new System.Drawing.Size(287, 19);
@@ -177,9 +179,9 @@
             this.GbPa.Controls.Add(this.RdtDebito);
             this.GbPa.Controls.Add(this.RdtTransfe);
             this.GbPa.Controls.Add(this.RdtEfectivo);
-            this.GbPa.Location = new System.Drawing.Point(988, 199);
+            this.GbPa.Location = new System.Drawing.Point(981, 238);
             this.GbPa.Name = "GbPa";
-            this.GbPa.Size = new System.Drawing.Size(215, 152);
+            this.GbPa.Size = new System.Drawing.Size(220, 155);
             this.GbPa.TabIndex = 268;
             this.GbPa.TabStop = false;
             this.GbPa.Text = "Paga con";
@@ -222,7 +224,7 @@
             this.BtnEspera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(211)))), ((int)(((byte)(168)))));
             this.BtnEspera.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEspera.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEspera.Location = new System.Drawing.Point(978, 374);
+            this.BtnEspera.Location = new System.Drawing.Point(981, 412);
             this.BtnEspera.Name = "BtnEspera";
             this.BtnEspera.Size = new System.Drawing.Size(257, 50);
             this.BtnEspera.TabIndex = 272;
@@ -234,9 +236,9 @@
             // 
             this.GrlMListar.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.GrlMListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GrlMListar.Location = new System.Drawing.Point(19, 274);
+            this.GrlMListar.Location = new System.Drawing.Point(22, 228);
             this.GrlMListar.Name = "GrlMListar";
-            this.GrlMListar.Size = new System.Drawing.Size(953, 327);
+            this.GrlMListar.Size = new System.Drawing.Size(953, 403);
             this.GrlMListar.TabIndex = 273;
             // 
             // LblTotal
@@ -245,7 +247,7 @@
             this.LblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LblTotal.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotal.Location = new System.Drawing.Point(697, 631);
+            this.LblTotal.Location = new System.Drawing.Point(700, 661);
             this.LblTotal.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(275, 41);
@@ -267,7 +269,7 @@
             // 
             this.CmbMostrarSegun.Font = new System.Drawing.Font("Rockwell", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CmbMostrarSegun.FormattingEnabled = true;
-            this.CmbMostrarSegun.Location = new System.Drawing.Point(15, 145);
+            this.CmbMostrarSegun.Location = new System.Drawing.Point(6, 54);
             this.CmbMostrarSegun.Margin = new System.Windows.Forms.Padding(6);
             this.CmbMostrarSegun.Name = "CmbMostrarSegun";
             this.CmbMostrarSegun.Size = new System.Drawing.Size(423, 31);
@@ -279,12 +281,26 @@
             this.LblMos.AutoSize = true;
             this.LblMos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
             this.LblMos.Font = new System.Drawing.Font("Rockwell", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMos.Location = new System.Drawing.Point(15, 109);
+            this.LblMos.Location = new System.Drawing.Point(6, 18);
             this.LblMos.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LblMos.Name = "LblMos";
             this.LblMos.Size = new System.Drawing.Size(206, 19);
             this.LblMos.TabIndex = 277;
             this.LblMos.Text = "Mostrar Segun Categoria";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.LblCantidad);
+            this.panel1.Controls.Add(this.LblMos);
+            this.panel1.Controls.Add(this.CmbMostrarSegun);
+            this.panel1.Controls.Add(this.CmbMenu);
+            this.panel1.Controls.Add(this.NumCantidad);
+            this.panel1.Controls.Add(this.BtnAgregar);
+            this.panel1.Controls.Add(this.BtnQuitar);
+            this.panel1.Location = new System.Drawing.Point(12, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1337, 132);
+            this.panel1.TabIndex = 278;
             // 
             // FrmTicket
             // 
@@ -292,8 +308,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(181)))), ((int)(((byte)(135)))));
             this.ClientSize = new System.Drawing.Size(1350, 729);
-            this.Controls.Add(this.LblMos);
-            this.Controls.Add(this.CmbMostrarSegun);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.LblM);
             this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.GrlMListar);
@@ -302,13 +317,8 @@
             this.Controls.Add(this.Npersonas);
             this.Controls.Add(this.LblCant);
             this.Controls.Add(this.LblMesa);
-            this.Controls.Add(this.BtnQuitar);
             this.Controls.Add(this.BtnImprimir);
             this.Controls.Add(this.BtnVolver);
-            this.Controls.Add(this.BtnAgregar);
-            this.Controls.Add(this.NumCantidad);
-            this.Controls.Add(this.CmbMenu);
-            this.Controls.Add(this.LblCantidad);
             this.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
@@ -321,6 +331,8 @@
             this.GbPa.ResumeLayout(false);
             this.GbPa.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GrlMListar)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,5 +359,6 @@
         private System.Windows.Forms.Label LblM;
         private System.Windows.Forms.ComboBox CmbMostrarSegun;
         private System.Windows.Forms.Label LblMos;
+        private System.Windows.Forms.Panel panel1;
     }
 }

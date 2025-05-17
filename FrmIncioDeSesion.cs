@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmIncioDeSesion : Form
     {
@@ -37,7 +37,6 @@ namespace PryPueblox
             string nombreUsuario = TxtUsuario.Text.Trim();
             string contrasena = TxtContraseña.Text; 
 
-            // 2. Validación 
             if (string.IsNullOrWhiteSpace(nombreUsuario)) { MessageBox.Show("Ingrese usuario."); TxtUsuario.Focus(); return; }
             if (string.IsNullOrEmpty(contrasena)) { MessageBox.Show("Ingrese contraseña."); TxtContraseña.Focus(); return; }
 
@@ -63,7 +62,7 @@ namespace PryPueblox
                             infoUsuario["Nombre"].ToString(),
                             infoUsuario["Apellido"].ToString(),
                             infoUsuario["Correo"].ToString(),
-                            Convert.ToInt32(infoUsuario["IdCategoriaU"]) // ID del Rol
+                            Convert.ToInt32(infoUsuario["IdCategoriaU"]) 
                         );
 
                         // Mostrar bienvenida personalizada
@@ -73,12 +72,11 @@ namespace PryPueblox
                         FrmInicio frmPrincipal = new FrmInicio();
                         frmPrincipal.Show();
 
-                        // Cerrar este formulario de login (usar Close es mejor que Hide)
                         this.Hide();
                     }
                     else
                     {
-                        // Error muy raro: El login fue válido, pero no pudimos obtener los datos del usuario.
+                        // Error
                         MessageBox.Show("Login válido, pero ocurrió un error al recuperar la información del usuario.", "Error Interno", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         Console.WriteLine($"Error: GetUsuarioInfoCompleta devolvió null para el usuario válido {nombreUsuario}");
                     }
@@ -103,27 +101,27 @@ namespace PryPueblox
         // --- Evento Load ---
         private void FrmIncioDeSesion_Load(object sender, EventArgs e)
         {
-            // Poner el foco en el campo de usuario al cargar
+            // Poner el foco 
             TxtUsuario.Focus();
         }
 
         // --- Métodos para Permitir login con la tecla Enter ---
         private void SetupEventosEnter()
         {
-            // ¡Verifica los nombres TxtUsuario y TxtContraseña!
+            // Verifica los nombres TxtUsuario y TxtContraseña
             TxtUsuario.KeyDown += TextBox_KeyDown;
-            TxtContraseña.KeyDown += TextBox_KeyDown; // Nombre con Ñ
+            TxtContraseña.KeyDown += TextBox_KeyDown; 
         }
 
         private void TextBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                // ¡Verifica el nombre BtnIniciar!
+                
                 BtnIniciar.PerformClick();
                 e.SuppressKeyPress = true;
             }
         }
 
-    } // Fin clase FrmIncioDeSesion
+    } 
 }

@@ -9,7 +9,7 @@ using System.Text.RegularExpressions; // Para validación
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmPerfil : Form
     {

@@ -11,7 +11,7 @@ using System.Globalization; // Para formato de moneda
 using System.IO;             // Para Path y StreamWriter/File
 using System.Data.OleDb;    // Para CargarCategoriasFiltro temporalmente
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmTicket : Form
     {
@@ -353,25 +353,48 @@ namespace PryPueblox
         private void BtnImprimir_Click(object sender, EventArgs e)
         {
             string metodoPago = ObtenerMetodoPago();
-            if (metodoPago == "Sin especificar" || GrlMListar.Rows.Count == 0) { MessageBox.Show("Seleccione pago y/o agregue items."); return; }
-            if (!GuardarOrden()) { MessageBox.Show("Error al guardar estado final."); return; }
+            if (metodoPago == "Sin especificar" || GrlMListar.Rows.Count == 0)
+            {
+                MessageBox.Show("Seleccione método de pago y/o agregue items a la orden.", "Datos Faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!GuardarOrden()) // GuardarOrden ya guarda el total final con/sin recargo
+            {
+                MessageBox.Show("Ocurrió un error al guardar el estado final de la orden. No se puede continuar con la impresión.", "Error al Guardar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             // --- EXPORTAR A CSV (Llamada INCLUIDA) ---
-            try { ExportarOrdenACSV(currentIdOrden, metodoPago); }
-            catch (Exception exCsv) { MessageBox.Show($"Error exportando a CSV:\n{exCsv.Message}"); /* Continuar? */ }
+            try
+            {
+                ExportarOrdenACSV(currentIdOrden, metodoPago);
+            }
+            catch (Exception exCsv)
+            {
+                MessageBox.Show($"Ocurrió un error al exportar la orden a CSV:\n{exCsv.Message}", "Error Exportación CSV", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                // Considerar si se debe detener la impresión o no. Por ahora, continuamos.
+            }
             // -----------------------------------------
 
             // Imprimir Ticket
-            try { TicketPrinter printer = new TicketPrinter(); printer.GenerarTicketDesdeBD(currentIdOrden, metodoPago); }
-            catch (Exception exPrint) { MessageBox.Show($"Error durante impresión:\n{exPrint.Message}"); }
+            try
+            {
+                TicketPrinter printer = new TicketPrinter();
+                printer.GenerarTicketDesdeBD(currentIdOrden, metodoPago); // GenerarTicketDesdeBD usa el total ya guardado
+            }
+            catch (Exception exPrint)
+            {
+                MessageBox.Show($"Ocurrió un error durante la impresión del ticket:\n{exPrint.Message}", "Error de Impresión", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Considerar si se debe detener el cierre del formulario. Por ahora, continuamos.
+            }
 
-            // Liberar Mesa
-            const int ID_ESTADO_LIBRE = 1;
-            try { if (!miConexion.UpdateTableStatus(currentIdMesa, ID_ESTADO_LIBRE)) { /* Adv */ } }
-            catch (Exception exLiberar) { /* MsgBox Error */ }
+          
 
             // Cerrar Form
-            this.DialogResult = DialogResult.OK; this.Close();
+            MessageBox.Show($"Ticket para la orden {currentIdOrden} procesado. La mesa {currentIdMesa} permanece ocupada hasta que se cierre manualmente.", "Proceso Completado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK; // Indica que la operación del ticket fue "OK"
+            this.Close(); // Cierra FrmTicket
         }
 
         // Obtiene método de pago seleccionado

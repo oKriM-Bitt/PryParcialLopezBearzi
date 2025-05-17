@@ -1,4 +1,4 @@
-﻿namespace PryPueblox
+﻿namespace PuebloGrill
 {
     partial class FrmInicio
     {
@@ -150,7 +150,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::PryPueblox.Properties.Resources.f861b851_0d67_4392_bb42_a3bf670a6ecf;
+            this.pictureBox1.Image = global::PuebloGrill.Properties.Resources.f861b851_0d67_4392_bb42_a3bf670a6ecf;
             this.pictureBox1.Location = new System.Drawing.Point(198, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1165, 765);

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmCargarPlato : Form
     {
@@ -304,7 +304,7 @@ namespace PryPueblox
             CargarCategoriasCombos();  // Carga ambos ComboBox de categorías
             CargarGridProductos();     // Carga los productos en la grilla
             LimpiarCamposCarga();      // Limpia campos de la izquierda
-            LimpiarCamposModificar();  // Limpia y deshabilita campos de la derecha
+            LimpiarCamposModificar();  // Limpia y deshabilita campos de la derecha/
             Console.WriteLine("FrmCargarPlato cargado.");
 
             // Añadir validadores KeyPress para campos numéricos

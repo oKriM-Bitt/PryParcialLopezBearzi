@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PryPueblox.Properties
+namespace PuebloGrill.Properties
 {
 
 

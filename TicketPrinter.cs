@@ -1,149 +1,126 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Data;      
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms; 
-using System.IO;         
-using System.Drawing;       
-using System.Drawing.Printing; 
+using System.Windows.Forms;
+using System.IO;
+using System.Drawing;
+using System.Drawing.Printing;
+using System.Globalization; // Para CultureInfo
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     class TicketPrinter
     {
-
-        // --- Variables y Configuración ---
-        private string ticketContent; 
-        private static int numeroTicket = 1;
-        // Instancia para acceder a la base de datos
+        private string ticketContent;
+        private static int numeroTicket = 1; // Considera una forma más robusta para producción
         private ClsConexion miConexion;
-       
 
-        // --- Constructor ---
+        // Constantes para recargo/descuento
+        private const decimal PORCENTAJE_RECARGO_DEBITO = 0.10m; // 10% de aumento
+        private const decimal PORCENTAJE_DESCUENTO_EFECTIVO_TRANSFER = 0.10m; // 10% de descuento
+
         public TicketPrinter()
         {
-            // Crear la instancia de ClsConexion al crear el TicketPrinter
             miConexion = new ClsConexion();
         }
-      
 
-       
-        /// Genera e imprime un ticket obteniendo los datos desde la BD usando el IdOrdenes.
-        
         public void GenerarTicketDesdeBD(int idOrden, string metodoPago)
         {
-            Console.WriteLine($"Generando ticket desde BD para Orden ID: {idOrden}");
+            Console.WriteLine($"TicketPrinter: Generando ticket para Orden ID: {idOrden}, Método Pago: {metodoPago}");
             try
             {
-                // 1. Obtener datos de cabecera (Mesa, Fecha, Total)
-                // Llama al método que añadimos en ClsConexion
-               OrderHeaderInfo header = miConexion.GetOrderHeaderInfo(idOrden);
+                OrderHeaderInfo header = miConexion.GetOrderHeaderInfo(idOrden);
                 if (header == null)
                 {
-                    // Error si no se pudo obtener la información básica
                     MessageBox.Show($"Error crítico: No se pudieron obtener los datos de cabecera para la orden ID {idOrden}.", "Error Datos Ticket", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Salir del método
+                    return;
                 }
 
-                // 2. Obtener los items detallados (Cantidad, Nombre, Precio)
-                // Llama al método GetOrderItems (que ahora incluye Nombre y Precio gracias al JOIN)
                 DataTable items = miConexion.GetOrderItems(idOrden);
-                if (items == null) // Aunque GetOrderItems devuelve tabla vacía, verificamos
+                if (items == null)
                 {
-                    MessageBox.Show($"Error: No se pudieron obtener los items para la orden ID {idOrden}.", "Error Datos Ticket", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; // Salir si no hay items
+                    MessageBox.Show($"Advertencia: No se encontraron ítems para la orden ID {idOrden}, pero se imprimirá cabecera.", "Datos Ticket", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    items = new DataTable(); // Evitar null ref
                 }
 
-                // 3. Construir el string del Ticket usando StringWriter
+                // header.Total de la BD es el subtotal bruto
+                decimal subTotalBruto = header.Total;
+                decimal totalFinalAPagar = subTotalBruto; // Iniciar con el subtotal bruto
+
+                // Aplicar recargo o descuento según el método de pago
+                if (metodoPago == "Débito" && subTotalBruto > 0)
+                {
+                    decimal montoRecargo = Math.Round(subTotalBruto * PORCENTAJE_RECARGO_DEBITO, 2);
+                    totalFinalAPagar = subTotalBruto + montoRecargo;
+                    Console.WriteLine($"Recargo por débito aplicado: {montoRecargo:C} sobre subtotal {subTotalBruto:C}. Total final: {totalFinalAPagar:C}");
+                }
+                else if ((metodoPago == "Efectivo" || metodoPago == "Transferencia") && subTotalBruto > 0)
+                {
+                    decimal montoDescuento = Math.Round(subTotalBruto * PORCENTAJE_DESCUENTO_EFECTIVO_TRANSFER, 2);
+                    totalFinalAPagar = subTotalBruto - montoDescuento;
+                    Console.WriteLine($"Descuento por {metodoPago} aplicado: {montoDescuento:C} sobre subtotal {subTotalBruto:C}. Total final: {totalFinalAPagar:C}");
+                }
+                else
+                {
+                    Console.WriteLine($"No se aplica recargo ni descuento. Subtotal y Total final: {totalFinalAPagar:C}");
+                }
+
                 using (StringWriter sw = new StringWriter())
                 {
-                    // --- Encabezado del Ticket ---
                     sw.WriteLine("********** RESTAURANTE PUEBLO GRILL **********");
                     sw.WriteLine("             *** TICKET *** ");
-                    // Considera usar header.IdNumeroTicket si lo implementas en GetOrderHeaderInfo
-                    sw.WriteLine($"Número de Ticket: {numeroTicket}");
-                    sw.WriteLine($"Fecha: {header.Fecha:dd/MM/yyyy}   Hora: {header.Fecha:HH:mm:ss}"); // Usa fecha/hora de la BD
+                    sw.WriteLine($"Número de Ticket: {numeroTicket}"); // Idealmente, este ID vendría de la orden
+                    sw.WriteLine($"Fecha: {header.Fecha:dd/MM/yyyy}   Hora: {header.Fecha:HH:mm:ss}");
                     sw.WriteLine("-------------------------------------------------");
-                    sw.WriteLine($"MESA: {header.NumeroMesa}"); // Usa número de mesa de la BD
+                    sw.WriteLine($"MESA: {header.NumeroMesa}");
                     sw.WriteLine("-------------------------------------------------");
                     sw.WriteLine($"{"CANT",-5} | {"PLATO",-20} | {"PRECIO",8} | {"SUBTOTAL",8}");
                     sw.WriteLine("-------------------------------------------------");
 
-                    // --- Detalle de Items (Iterando el DataTable) ---
-                    foreach (DataRow row in items.Rows)
+                    if (items.Rows.Count > 0)
                     {
-                        // Leer datos de la fila actual
-                        // Añadir validación por si acaso vienen nulos de la BD
-                        int cantidad = row["Cantidad"] != DBNull.Value ? Convert.ToInt32(row["Cantidad"]) : 0;
-                        string nombrePlato = row["Nombre"] != DBNull.Value ? row["Nombre"].ToString() : "N/A";
-                        decimal precioUnitario = row["Precio"] != DBNull.Value ? Convert.ToDecimal(row["Precio"]) : 0m;
-
-                        // Calcular subtotal para esta línea
-                        decimal subtotal = cantidad * precioUnitario;
-
-                        // Formatear valores para el ticket
-                        string precioFormateado = $"${precioUnitario,8:F2}";
-                        string subtotalFormateado = $"${subtotal,8:F2}";
-
-                        // Escribir la línea del item
-                        sw.WriteLine($"{cantidad,-5} | {Truncate(nombrePlato, 20),-20} | {precioFormateado} | {subtotalFormateado}");
+                        foreach (DataRow row in items.Rows)
+                        {
+                            int cantidad = row["Cantidad"] != DBNull.Value ? Convert.ToInt32(row["Cantidad"]) : 0;
+                            string nombrePlato = row["Nombre"] != DBNull.Value ? row["Nombre"].ToString() : "N/A";
+                            decimal precioUnitario = row["Precio"] != DBNull.Value ? Convert.ToDecimal(row["Precio"]) : 0m;
+                            decimal subtotalItem = cantidad * precioUnitario;
+                            sw.WriteLine($"{cantidad,-5} | {Truncate(nombrePlato, 20),-20} | {precioUnitario,8:C2} | {subtotalItem,8:C2}");
+                        }
+                    }
+                    else
+                    {
+                        sw.WriteLine("           (Orden sin ítems detallados)");
                     }
 
-                    // --- Pie del Ticket ---
                     sw.WriteLine("-------------------------------------------------");
-
-                    // Lógica para mostrar desglose de recargo si aplica
-                    // Usamos el TOTAL FINAL guardado en la BD (header.Total)
-                    if (metodoPago == "Débito" && items.Rows.Count > 0 && header.Total > 0)
-                    {
-                        // Recalcular subtotal sin recargo para mostrar desglose
-                        // ASUME un recargo del 10%. Ajusta si es diferente.
-                        decimal subTotalSinRecargo = header.Total / 1.10m;
-                        decimal aumentoCalculado = header.Total - subTotalSinRecargo;
-                        // Mostrar desglose
-                        sw.WriteLine($"Subtotal: ${subTotalSinRecargo,37:F2}");
-                        sw.WriteLine($"Aumento por débito (10%): ${aumentoCalculado,20:F2}");
-                        sw.WriteLine("-------------------------------------------------");
-                    }
-
-                    // Escribir el TOTAL FINAL (leído de la BD)
-                    sw.WriteLine($"TOTAL A PAGAR: ${header.Total,29:F2}");
+                    // NO SE MUESTRA DESGLOSE DE SUBTOTAL, RECARGO NI DESCUENTO
+                    sw.WriteLine($"TOTAL A PAGAR: {totalFinalAPagar,29:C2}"); // Muestra el total ya ajustado
                     sw.WriteLine("-------------------------------------------------");
-                    sw.WriteLine($"Método de pago: {metodoPago}"); // Usa el método pasado como argumento
+                    sw.WriteLine($"Método de pago: {metodoPago}");
                     sw.WriteLine("           ¡Gracias por su compra!");
-                    sw.WriteLine(""); // Línea extra al final
+                    sw.WriteLine("");
 
-                    // Guardar todo el texto generado en la variable de clase
                     ticketContent = sw.ToString();
+                }
 
-                } // Fin del using StringWriter
-
-                // Incrementar número de ticket (solución simple, no persistente)
                 numeroTicket++;
-
-                // 4. Llamar al método que imprime el contenido guardado en ticketContent
                 PrintTicket();
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ocurrió un error al generar el ticket (ID Orden: {idOrden}):\n{ex.Message}", "Error Generar Ticket", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                // Puedes decidir si quieres relanzar la excepción para que FrmTicket la capture
-                // throw;
             }
         }
 
-       
-
-
-        // MÉTODOS AUXILIARES DE IMPRESIÓN 
         private void PrintTicket()
         {
             if (string.IsNullOrEmpty(ticketContent)) { MessageBox.Show("No hay contenido para imprimir."); return; }
             PrintDocument printDoc = new PrintDocument();
-            
             printDoc.PrintPage += PrintPageHandler;
             try { printDoc.Print(); }
             catch (Exception ex) { MessageBox.Show($"Error al imprimir: {ex.Message}"); }
@@ -152,7 +129,7 @@ namespace PryPueblox
 
         private void PrintPageHandler(object sender, PrintPageEventArgs e)
         {
-            using (Font font = new Font("Courier New", 9)) //  fuente/tamaño
+            using (Font font = new Font("Courier New", 9))
             {
                 float yPos = 10; float leftMargin = 10;
                 float lineHeight = font.GetHeight(e.Graphics) + 2;
@@ -171,7 +148,5 @@ namespace PryPueblox
             if (string.IsNullOrEmpty(value)) return string.Empty;
             return value.Length <= maxLength ? value : value.Substring(0, maxLength);
         }
-      
-
-    } 
+    }
 }

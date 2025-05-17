@@ -1,4 +1,4 @@
-﻿namespace PryPueblox
+﻿namespace PuebloGrill
 {
     partial class FrmAbrirMesa
     {
@@ -777,6 +777,7 @@
             this.BtnMesa1.TabIndex = 45;
             this.BtnMesa1.Text = "Mesa 1";
             this.BtnMesa1.UseVisualStyleBackColor = false;
+            this.BtnMesa1.Click += new System.EventHandler(this.BtnMesa1_Click);
             // 
             // BtnMesa2
             // 

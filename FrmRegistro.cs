@@ -9,7 +9,7 @@ using System.Text.RegularExpressions; // Para validación de correo
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmRegistro : Form
     {
@@ -53,7 +53,7 @@ namespace PryPueblox
             // Eventos Leave para cambiar color al salir del control
             TxtNombre.Leave += Control_Leave;
             TxtApellido.Leave += Control_Leave;
-            TxtTelefono.Leave += Control_Leave; // <-- Añadido Telefono
+            TxtTelefono.Leave += Control_Leave; 
             TxtCorreo.Leave += Control_Leave;
             CmbCategoria.Leave += Control_Leave;
             TxtNombUsuario.Leave += Control_Leave;
@@ -62,13 +62,11 @@ namespace PryPueblox
             // Eventos KeyDown para usar Enter para navegar/aceptar
             TxtNombre.KeyDown += Control_KeyDown;
             TxtApellido.KeyDown += Control_KeyDown;
-            TxtTelefono.KeyDown += Control_KeyDown; // <-- Añadido Telefono
+            TxtTelefono.KeyDown += Control_KeyDown; 
             TxtCorreo.KeyDown += Control_KeyDown;
-            // CmbCategoria no necesita KeyDown usualmente
+           
             TxtNombUsuario.KeyDown += Control_KeyDown;
             TxtContraseña.KeyDown += Control_KeyDown; // Último control, llama a Agregar
-
-            // --- Añadido Evento KeyPress para validación de Teléfono ---
             TxtTelefono.KeyPress += TxtTelefono_KeyPress;
         }
 
@@ -76,20 +74,20 @@ namespace PryPueblox
         private void Control_Leave(object sender, EventArgs e)
         {
             Control ctrl = sender as Control; if (ctrl == null) return;
-            bool valido = EsControlValido(ctrl); // Revisa si el control es válido
+            bool valido = EsControlValido(ctrl); 
             if (ctrl is ComboBox && (ctrl as ComboBox).SelectedIndex == -1) { ctrl.BackColor = SystemColors.Window; }
-            else if (ctrl == TxtTelefono && string.IsNullOrWhiteSpace(ctrl.Text)) { ctrl.BackColor = SystemColors.Window; } // Teléfono opcional, no marcar rojo si vacío
-            else if (valido) { ctrl.BackColor = Color.LightGreen; } // Válido = Verde
-            else { ctrl.BackColor = Color.LightCoral; } // Inválido = Rojo (excepto Teléfono vacío)
+            else if (ctrl == TxtTelefono && string.IsNullOrWhiteSpace(ctrl.Text)) { ctrl.BackColor = SystemColors.Window; }
+            else if (valido) { ctrl.BackColor = Color.LightGreen; } 
+            else { ctrl.BackColor = Color.LightCoral; } 
         }
 
         private void Control_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                e.SuppressKeyPress = true; // Evitar sonido "ding"
-                if (sender == TxtContraseña) { BtnAgregar.PerformClick(); } // Enter en contraseña = clic en Agregar
-                else { this.SelectNextControl((Control)sender, true, true, true, true); } // Enter en otros = ir al siguiente control
+                e.SuppressKeyPress = true; 
+                if (sender == TxtContraseña) { BtnAgregar.PerformClick(); } 
+                else { this.SelectNextControl((Control)sender, true, true, true, true); } 
             }
         }
 
@@ -101,7 +99,7 @@ namespace PryPueblox
                 e.KeyChar != '+' && e.KeyChar != '-' && e.KeyChar != '(' &&
                 e.KeyChar != ')' && e.KeyChar != ' ')
             {
-                e.Handled = true; // Ignora el carácter no permitido
+                e.Handled = true; 
             }
         }
 
@@ -110,7 +108,7 @@ namespace PryPueblox
         {
             TxtNombre.BackColor = SystemColors.Window;
             TxtApellido.BackColor = SystemColors.Window;
-            TxtTelefono.BackColor = SystemColors.Window; // <-- Añadido Telefono
+            TxtTelefono.BackColor = SystemColors.Window; 
             TxtCorreo.BackColor = SystemColors.Window;
             CmbCategoria.BackColor = SystemColors.Window;
             TxtNombUsuario.BackColor = SystemColors.Window;
@@ -121,12 +119,12 @@ namespace PryPueblox
         {
             if (ctrl == TxtNombre) return !string.IsNullOrWhiteSpace(ctrl.Text);
             if (ctrl == TxtApellido) return !string.IsNullOrWhiteSpace(ctrl.Text);
-            if (ctrl == TxtTelefono) return true; // --- Teléfono es Opcional --- (Si quieres que sea obligatorio, cambia a: !string.IsNullOrWhiteSpace(ctrl.Text))
+            if (ctrl == TxtTelefono) return true; 
             if (ctrl == TxtCorreo) return EsCorreoValido(ctrl.Text);
             if (ctrl == CmbCategoria) return (ctrl as ComboBox).SelectedIndex > -1;
             if (ctrl == TxtNombUsuario) return !string.IsNullOrWhiteSpace(ctrl.Text);
-            if (ctrl == TxtContraseña) return !string.IsNullOrWhiteSpace(ctrl.Text); // Considera validar longitud mínima
-            return true; // Otros controles se asumen válidos
+            if (ctrl == TxtContraseña) return !string.IsNullOrWhiteSpace(ctrl.Text); 
+            return true; 
         }
 
         private bool ValidarFormularioCompleto(out Control primerControlInvalido)
@@ -179,24 +177,36 @@ namespace PryPueblox
             string nombre = TxtNombre.Text.Trim();
             string apellido = TxtApellido.Text.Trim();
             string correo = TxtCorreo.Text.Trim();
-            string telefono = TxtTelefono.Text.Trim(); // <-- Obtener Teléfono
+            string telefono = TxtTelefono.Text.Trim(); 
             int idCategoriaU = Convert.ToInt32(CmbCategoria.SelectedValue);
             string nombreUsuario = TxtNombUsuario.Text.Trim();
-            string contraseñaPlana = TxtContraseña.Text; // Nombre con Ñ
+            string contraseñaPlana = TxtContraseña.Text; 
 
-            // Verificar si usuario existe...
-            try { if (usuarioDal.UsuarioExiste(nombreUsuario)) { MessageBox.Show($"Usuario '{nombreUsuario}' ya existe."); TxtNombUsuario.Focus(); return; } } catch (Exception exDbCheck) { MessageBox.Show("Error al verificar usuario:\n" + exDbCheck.Message); return; }
+            // Verificar si usuario existe
+            try 
+            {
+                if (usuarioDal.UsuarioExiste(nombreUsuario)) 
+                {
+                    MessageBox.Show($"Usuario '{nombreUsuario}' ya existe."); TxtNombUsuario.Focus(); 
+                    return;
+                } 
+            } 
+            catch (Exception exDbCheck) 
+            {
+                MessageBox.Show("Error al verificar usuario:\n" + exDbCheck.Message); 
+                return; 
+            }
 
-            // Hashear contraseña...
+            // Hashear contraseña
             string contraseñaHasheada = usuarioDal.HashPassword(contraseñaPlana);
 
-            // Intentar registrar (Pasando también el teléfono)...
+            // Intentar registrar 
             try
             {
                 // --- Llamada al método MODIFICADO de UsuarioDAL ---
                 bool registroExitoso = usuarioDal.RegistrarUsuario(
                     nombre, apellido, correo, idCategoriaU,
-                    nombreUsuario, contraseñaHasheada, telefono // <-- Pasamos teléfono
+                    nombreUsuario, contraseñaHasheada, telefono 
                 );
 
                 if (registroExitoso) { MessageBox.Show("¡Usuario registrado!"); LimpiarFormulario(); }
@@ -210,11 +220,11 @@ namespace PryPueblox
         {
             TxtNombre.Clear();
             TxtApellido.Clear();
-            TxtTelefono.Clear(); // <-- Añadido Telefono
+            TxtTelefono.Clear(); 
             TxtCorreo.Clear();
             CmbCategoria.SelectedIndex = -1;
             TxtNombUsuario.Clear();
-            TxtContraseña.Clear(); // Nombre con Ñ
+            TxtContraseña.Clear(); 
             LimpiarColoresValidacion();
             TxtNombre.Focus();
         }
@@ -229,5 +239,5 @@ namespace PryPueblox
             this.Hide();
         }
 
-    } // Fin Clase FrmRegistro
-} // Fin Namespace
+    } 
+} 

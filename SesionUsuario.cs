@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
    
     // Clase estática para mantener la información del usuario logueado.

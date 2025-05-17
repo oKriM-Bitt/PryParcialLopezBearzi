@@ -10,7 +10,7 @@ using System.Windows.Forms;
 // Asegúrate de tener este using si usas CultureInfo en algún lado
 // using System.Globalization;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmAbrirMesa : Form
     {
@@ -151,60 +151,129 @@ namespace PryPueblox
 
                     switch (estadoActual)
                     {
-                        case ID_ESTADO_LIBRE: // --- Si está Libre (1 = Abierta) ---
+                        case ID_ESTADO_LIBRE: // --- Si está Libre (1) ---
                             Console.WriteLine($"Mesa {numeroMesa} está Libre. Intentando ocupar...");
                             if (miConexion.UpdateTableStatus(numeroMesa, ID_ESTADO_OCUPADO)) // Ponerla Ocupada (3)
                             {
                                 UpdateButtonColor(clickedButton, ID_ESTADO_OCUPADO); // Poner en Rojo
                                 FrmTicket ticketForm = new FrmTicket();
                                 ticketForm.CargarInformacionMesa(numeroMesa, true); // true = nueva orden
-                                // **** USA ShowDialog() y luego Refresca ****
                                 ticketForm.ShowDialog();
-                                LoadInitialTableStates(); // Actualiza colores después de cerrar FrmTicket
+                                LoadInitialTableStates();
                                 Console.WriteLine($"FrmTicket (Nueva) cerrada para mesa {numeroMesa}. Estados refrescados.");
                             }
                             else { MessageBox.Show($"No se pudo ocupar la mesa {numeroMesa}.", "Error DB", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
                             break;
 
-                        case ID_ESTADO_OCUPADO: // --- Si está Ocupada (3 = En Proceso) ---
-                            Console.WriteLine($"Mesa {numeroMesa} está Ocupada. Preguntando acción...");
-                            DialogResult result = MessageBox.Show("La mesa está en proceso. Seleccione una acción:\n\nSí = Modificar Orden\nNo = Liberar Mesa", "Acción Requerida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                            if (result == DialogResult.Yes) // Modificar
+                        case ID_ESTADO_OCUPADO: // --- Si está Ocupada (3) ---
+                            Console.WriteLine($"Mesa {numeroMesa} está Ocupada. Abriendo diálogo de acciones...");
+
+                            using (FrmAccionesMesaOcupada DlgAcciones = new FrmAccionesMesaOcupada(numeroMesa))
                             {
-                                UpdateButtonColor(clickedButton, ID_ESTADO_OCUPADO); // Asegurar Rojo
-                                FrmTicket ticketForm = new FrmTicket();
-                                ticketForm.CargarInformacionMesa(numeroMesa, false); // false = orden existente
-                                // **** USA ShowDialog() y luego Refresca ****
-                                ticketForm.ShowDialog();
-                                LoadInitialTableStates(); // Actualiza colores después de cerrar FrmTicket
-                                Console.WriteLine($"FrmTicket (Modificar) cerrada para mesa {numeroMesa}. Estados refrescados.");
-                            }
-                            else if (result == DialogResult.No) // Liberar
-                            {
-                                Console.WriteLine($"Intentando liberar Mesa {numeroMesa}...");
-                                if (miConexion.UpdateTableStatus(numeroMesa, ID_ESTADO_LIBRE)) // Ponerla Libre (1)
+                                DialogResult resultadoDialogo = DlgAcciones.ShowDialog(this); // Mostrar como diálogo modal
+
+                                if (resultadoDialogo == DialogResult.OK) // El usuario presionó Modificar, Limpiar o Cobrada
                                 {
-                                    UpdateButtonColor(clickedButton, ID_ESTADO_LIBRE); // Poner en Verde
-                                    Console.WriteLine($"Mesa {numeroMesa} liberada.");
+                                    switch (DlgAcciones.AccionSeleccionada)
+                                    {
+                                        case TipoAccionMesa.Modificar:
+                                            Console.WriteLine($"Usuario eligió: Modificar Orden para mesa {numeroMesa}.");
+                                            FrmTicket ticketFormMod = new FrmTicket();
+                                            ticketFormMod.CargarInformacionMesa(numeroMesa, false); // false = orden existente
+                                            ticketFormMod.ShowDialog();
+                                            LoadInitialTableStates(); // Refrescar estados
+                                            Console.WriteLine($"FrmTicket (Modificar) cerrada para mesa {numeroMesa}. Estados refrescados.");
+                                            break;
+
+                                        case TipoAccionMesa.Limpiar:
+                                            Console.WriteLine($"Usuario eligió: Limpiar Mesa {numeroMesa}.");
+                                            DialogResult confirmLimpiar = MessageBox.Show($"¿Está seguro que desea LIMPIAR la mesa {numeroMesa}?\nEsto ANULARÁ la orden actual y liberará la mesa.",
+                                                                                         "Confirmar Limpieza de Mesa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                                            if (confirmLimpiar == DialogResult.Yes)
+                                            {
+                                                int idOrdenActivaLimpiar = miConexion.GetActiveOrderIdForMesa(numeroMesa);
+                                                bool ordenAnuladaOk = true; // Asumir éxito si no hay orden
+
+                                                if (idOrdenActivaLimpiar > 0)
+                                                {
+                                                    Console.WriteLine($"Intentando anular/limpiar orden ID: {idOrdenActivaLimpiar} para mesa {numeroMesa}.");
+                                                    // AQUÍ VA TU LÓGICA PARA ANULAR LA ORDEN EN LA BD Y DEVOLVER STOCK
+                                                    // Ejemplo: ordenAnuladaOk = miConexion.AnularOrdenYDevolverStock(idOrdenActivaLimpiar);
+                                                    // Por ahora, solo un mensaje:
+                                                    MessageBox.Show($"Simulación: Orden ID {idOrdenActivaLimpiar} ANULADA y stock devuelto.", "Limpieza (Simulación)", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                }
+
+                                                if (ordenAnuladaOk)
+                                                {
+                                                    if (miConexion.UpdateTableStatus(numeroMesa, ID_ESTADO_LIBRE))
+                                                    {
+                                                        UpdateButtonColor(clickedButton, ID_ESTADO_LIBRE); // Poner en Verde
+                                                        MessageBox.Show($"Mesa {numeroMesa} LIMPIADA y marcada como libre.", "Mesa Liberada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                    }
+                                                    else
+                                                    {
+                                                        MessageBox.Show($"Se anuló la orden (si existía), pero no se pudo liberar la mesa {numeroMesa}.", "Error DB Parcial", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show($"No se pudo anular la orden ID {idOrdenActivaLimpiar}. La mesa {numeroMesa} no fue liberada.", "Error Anulación Orden", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                                }
+                                            }
+                                            else { Console.WriteLine($"Limpieza de mesa {numeroMesa} cancelada por el usuario."); }
+                                            break;
+
+                                        case TipoAccionMesa.Cobrada:
+                                            Console.WriteLine($"Usuario eligió: Cobrada y Cerrar para mesa {numeroMesa}.");
+                                            DialogResult confirmCobrado = MessageBox.Show($"¿Confirma que la orden de la mesa {numeroMesa} ha sido COBRADA y desea liberarla?",
+                                                                                         "Confirmar Cobro y Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                                            if (confirmCobrado == DialogResult.Yes)
+                                            {
+                                                // Se asume que el FrmTicket ya guardó la orden como cobrada, imprimió, etc.
+                                                // Aquí solo liberamos la mesa.
+                                                if (miConexion.UpdateTableStatus(numeroMesa, ID_ESTADO_LIBRE))
+                                                {
+                                                    UpdateButtonColor(clickedButton, ID_ESTADO_LIBRE); // Poner en Verde
+                                                    MessageBox.Show($"Mesa {numeroMesa} marcada como COBRADA y LIBRE.", "Mesa Liberada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                                }
+                                                else
+                                                {
+                                                    MessageBox.Show($"No se pudo liberar la mesa {numeroMesa} después del cobro.", "Error DB", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                                }
+                                            }
+                                            else { Console.WriteLine($"Cobro y cierre de mesa {numeroMesa} cancelado por el usuario."); }
+                                            break;
+                                    }
                                 }
-                                else { MessageBox.Show($"No se pudo liberar la mesa {numeroMesa}.", "Error DB", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
+                                else // El usuario presionó Cancelar en el diálogo de acciones o cerró la ventana
+                                {
+                                    Console.WriteLine($"Acción para mesa {numeroMesa} cancelada por el usuario desde el diálogo.");
+                                }
                             }
-                            // Si elige No, NO se refresca aquí, ya se cambió el color localmente.
-                            // El refresh general ocurrirá la próxima vez que se abra FrmTicket o se reinicie FrmAbrirMesa.
                             break;
 
-                        case ID_ESTADO_CERRADA: // --- Si está Cerrada (2) ---
+                        case ID_ESTADO_CERRADA:
                             Console.WriteLine($"Mesa {numeroMesa} está en estado 'Cerrada'.");
-                            MessageBox.Show($"La mesa {numeroMesa} figura como 'Cerrada'.\nContacte al administrador si cree que es un error o defina una acción.", "Mesa Cerrada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            // Opcional: tratarla como libre para el usuario?
-                            // UpdateButtonColor(clickedButton, ID_ESTADO_LIBRE);
+                            DialogResult reabrirResult = MessageBox.Show($"La mesa {numeroMesa} figura como 'Cerrada'.\n\n¿Desea marcarla como 'Libre' para una nueva orden?",
+                                                                        "Mesa Cerrada", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (reabrirResult == DialogResult.Yes)
+                            {
+                                if (miConexion.UpdateTableStatus(numeroMesa, ID_ESTADO_LIBRE))
+                                {
+                                    UpdateButtonColor(clickedButton, ID_ESTADO_LIBRE);
+                                    MessageBox.Show($"Mesa {numeroMesa} marcada como Libre.", "Estado Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
+                                else
+                                {
+                                    MessageBox.Show($"No se pudo actualizar el estado de la mesa {numeroMesa}.", "Error DB", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                }
+                            }
                             break;
 
-                        default: // Estado desconocido (-1 por error, 0 por dato viejo, u otro)
+                        default:
                             Console.WriteLine($"Estado desconocido ({estadoActual}) para Mesa {numeroMesa}.");
                             MessageBox.Show($"No se pudo procesar la mesa {numeroMesa}. Estado desconocido o error al leer (Estado devuelto: {estadoActual}).", "Error de Estado", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            clickedButton.BackColor = Color.Orange; // Marcar error
-                            // clickedButton.Enabled = false; // Opcional: Deshabilitar
+                            clickedButton.BackColor = Color.Orange;
                             break;
                     }
                 }
@@ -213,9 +282,11 @@ namespace PryPueblox
                     MessageBox.Show($"Error al procesar acción para mesa {numeroMesa}:\n{ex.InnerException?.Message ?? ex.Message}", "Error Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else { MessageBox.Show($"Error: Nombre de botón no válido '{clickedButton.Name}'.", "Error Interno", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            else
+            {
+                MessageBox.Show($"Error: Nombre de botón no válido '{clickedButton.Name}'.", "Error Interno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        // --------------------------
 
 
         // --- Otros Eventos (Ej: Volver) ---
@@ -256,6 +327,9 @@ namespace PryPueblox
         private void groupBox2_Enter(object sender, EventArgs e) { }
         private void BtnActualizar_Click(object sender, EventArgs e) { }
 
+        private void BtnMesa1_Click(object sender, EventArgs e)
+        {
 
+        }
     } // Fin de la clase FrmAbrirMesa
 }

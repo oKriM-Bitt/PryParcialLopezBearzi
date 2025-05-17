@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PryPueblox
+namespace PuebloGrill
 {
     public partial class FrmInicio: Form
     {
@@ -102,14 +102,16 @@ namespace PryPueblox
 
             // este es el contenido que se guarda  \n ese saltea la linea
             string contenido = "Analista de Sistemas\n" +
-                               "Laboratorio de Programación 2\n" +
-                               "DNI Alumno: 46 510 718\n" +
+                               
+                               "Dni:46 510 718\n" +
                                "Nombre Alumno: Mirko Lopez Bearzi" +
                                "Descripción del Proyecto\r\n" +
-                               "Control Visual de Mesas: Permite ver el estado (libre/ocupada) de las mesas del restaurante a través de una interfaz gráfica con botones.\r\nAdministración de Órdenes: Abre nuevas órdenes al seleccionar mesas libres o carga órdenes existentes para mesas ocupadas. Permite añadir o quitar productos del pedido.\r\nGestión de Menú: Carga productos desde la base de datos, muestra precios, permite filtrar por categoría y maneja (implícitamente) el stock.\r\nProceso de Pago y Ticket: Calcula el total de la orden, permite seleccionar el método de pago (con posible recargo) y genera un ticket detallado para imprimir.\r\nRegistro/Exportación: Guarda las órdenes finalizadas y exporta un resumen diario en formato CSV.\r\nArquitectura Refactorizada: El código está organizado en clases separadas para la lógica de acceso a datos (CRUD para Órdenes, Productos, Categorías) y la interfaz de usuario (Formularios)." +
-                               ""
-
-                               ;
+                               "Control Visual de Mesas: Permite ver el estado (libre/ocupada) de las mesas del restaurante a través de una interfaz gráfica con botones.\r\n" +
+                               "Administración de Órdenes: Abre nuevas órdenes al seleccionar mesas libres o carga órdenes existentes para mesas ocupadas. Permite añadir o quitar productos del pedido.\r\n" +
+                               "Gestión de Menú: Carga productos desde la base de datos, muestra precios, permite filtrar por categoría y maneja (implícitamente) el stock.\r\n" +
+                               "Proceso de Pago y Ticket: Calcula el total de la orden, permite seleccionar el método de pago (con posible recargo) y genera un ticket detallado para imprimir.\r\n" +
+                               "Registro/Exportación: Guarda las órdenes finalizadas y exporta un resumen diario en formato CSV.\r\n" +
+                               "Arquitectura Refactorizada: El código está organizado en clases separadas para la lógica de acceso a datos (CRUD para Órdenes, Productos, Categorías) y la interfaz de usuario (Formularios)."   ;
 
             // intanciamos el metodo y lo grabamo
             instancia.Grabar(contenido);
